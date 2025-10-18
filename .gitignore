@@ -12,7 +12,7 @@ buildNumber.properties
 .mvn/timing.properties
 # https://maven.apache.org/wrapper/#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
-
+.github/workflows
 # Eclipse m2e generated files
 # Eclipse Core
 .project

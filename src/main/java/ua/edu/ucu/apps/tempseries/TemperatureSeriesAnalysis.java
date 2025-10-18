@@ -1,17 +1,24 @@
 package ua.edu.ucu.apps.tempseries;
 
 public class TemperatureSeriesAnalysis {
-
+    private double[] temperatureSeries;
     public TemperatureSeriesAnalysis() {
 
     }
 
     public TemperatureSeriesAnalysis(double[] temperatureSeries) {
-
+        this.temperatureSeries = temperatureSeries;
     }
 
     public double average() {
-        return -1;
+        if (temperatureSeries.length == 0) {
+            throw new IllegalArgumentException("Temperature series is empty");
+        }
+        double sum = 0;
+        for (double temp : temperatureSeries) {
+            sum += temp;
+        }
+        return sum / temperatureSeries.length;
     }
 
     public double deviation() {
